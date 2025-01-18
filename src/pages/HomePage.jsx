@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   return (
     <div className="relative h-screen w-full">
-      {/* Spline Background */}
+      {/* Earth Background */}
       <spline-viewer
         loading-anim-type="spinner-small-light"
         url="https://prod.spline.design/KDcJ9iKS7QaDojfI/scene.splinecode"
         background="transparent"
         style={{
           position: "absolute",
-          top: "0%",
+          top: "-12%",
           left: "30%",
           width: "100%",
           height: "120%",
