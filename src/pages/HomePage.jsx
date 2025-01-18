@@ -21,7 +21,7 @@ export default function HomePage() {
       ></spline-viewer>
 
       {/* Content Overlay */}
-      <div className="flex flex-col items-center justify-center h-full text-white z-10">
+      <div className="flex flex-col items-start justify-center h-full text-white z-10 ml-14">
         <h1 className="text-4xl font-bold mb-8">
           Welcome to the Space Dashboard
         </h1>
