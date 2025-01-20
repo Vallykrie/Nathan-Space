@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchEpicImages } from '../utils/api';
+import Navbar from '../component/navbar';
 import "../index.css"
 
 export default function EpicPage() {
@@ -39,9 +40,9 @@ export default function EpicPage() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-10">
+        <div className="container mx-auto px-4">
+            <Navbar></Navbar>
             <h1 className="text-3xl font-bold text-center mb-8">NASA EPIC Image Viewer</h1>
-
             {/* Date Selector */}
             <div className="flex items-center justify-center mb-6">
                 <input
