@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Krona+One&family=Lao+Muang+Khong&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 .selector {
     user-drag: none;

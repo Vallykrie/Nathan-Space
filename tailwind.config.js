@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jockey: ['Jockey One', 'sans-serif'],
+        krona: ['Krona One', 'sans-serif'],
+        lao: ['Lao Muang Khong', 'serif'],
+      },
+    },
   },
   plugins: [],
 }

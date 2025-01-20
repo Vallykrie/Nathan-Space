@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
     <nav className="p-4">
       <div className="container mx-auto flex justify-between">
-        <Link to="/" className="text-xl font-bold">
-          <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="max-h-14" />
         </Link>
-        <div className="flex">
+        <div className="flex items-center font-jockey">
           <Link to="/apod" className="mr-4 hover:underline">
             HOME
           </Link>
