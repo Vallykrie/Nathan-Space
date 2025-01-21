@@ -7,7 +7,7 @@ export default function HomePage() {
     <div className="relative h-screen w-full overflow-hidden px-4">
       <NavBar />
       {/* Earth */}
-      <div className="w-1/2 max-[1000px]:hidden block">
+      <div className="w-1/2 max-[1080px]:hidden block">
         <spline-viewer
           loading-anim-type="spinner-small-light"
           url="https://prod.spline.design/H4aw8VeY0ATSL3MC/scene.splinecode"
