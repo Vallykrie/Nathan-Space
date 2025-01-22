@@ -8,7 +8,7 @@ import MarsGallery from "./pages/MarsPage";
 function App() {
   return (
     <Router>
-      <div className="bg-black min-h-screen">
+      <div className="bg-black min-h-screen text-white">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/epic" element={<EpicPage />} />
