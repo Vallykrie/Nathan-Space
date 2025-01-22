@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import NavBar from "../component/navbar";
+import NavBar from "../components/navbar";
 import titleLine from "../assets/titleLine.svg";
 
 export default function HomePage() {
   return (
-    <div className="relative h-screen w-full overflow-hidden px-4">
+    <div className="h-screen overflow-hidden px-4">
       <NavBar />
       {/* Earth */}
       <div className="w-1/2 max-[1080px]:hidden block">

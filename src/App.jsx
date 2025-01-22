@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Pages
 import HomePage from "./pages/HomePage";
 import EpicPage from "./pages/EpicPage";
+import ApodPage from "./pages/ApodPage";
+import MarsGallery from "./pages/MarsPage";
 
-// App Component
 function App() {
   return (
     <Router>
@@ -12,6 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/epic" element={<EpicPage />} />
+          <Route path="/apod" element={<ApodPage />} />
+          <Route path="/marsrover" element={<MarsGallery />} />
         </Routes>
       </div>
     </Router>
