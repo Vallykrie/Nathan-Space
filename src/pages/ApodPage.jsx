@@ -28,7 +28,7 @@ const APOD = () => {
     <div className="min-h-screen px-4">
       <NavBar></NavBar>
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-bold mb-4 text-center">
+        <h1 className="text-4xl font-bold mb-8 text-center">
           Astronomy Picture of the Day
         </h1>
         <input

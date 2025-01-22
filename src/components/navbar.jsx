@@ -6,7 +6,7 @@ const linkClass = "hover:drop-shadow-[0_0px_10px_rgba(255,255,255,1)]";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 sticky z-50">
+    <nav className="p-4 sticky z-50 text-white">
       <div className="container mx-auto flex justify-between mb-3">
         <Link to="/">
           <img src={logo} alt="logo" className="max-h-10 mt-3" />
@@ -23,6 +23,9 @@ const Navbar = () => {
           </Link>
           <Link to="/epic" className={linkClass}>
             EPIC
+          </Link>
+          <Link to="/about" className={linkClass}>
+            NEO
           </Link>
           <Link to="/about" className={linkClass}>
             ABOUT

@@ -32,12 +32,12 @@ const MarsGallery = () => {
   return (
     <div className="min-h-screen px-4">
         <Navbar></Navbar>
-      <h1 className="text-3xl font-bold text-center my-6">Mars Rover Gallery</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">Mars Rover Gallery</h1>
 
       {/* Rover and Sol Filters */}
       <div className="flex justify-center items-center mb-6 gap-4">
         <select
-          className="border rounded px-4 py-2"
+          className="border text-black rounded px-4 py-2"
           value={rover}
           onChange={(e) => setRover(e.target.value)}
         >
@@ -48,7 +48,7 @@ const MarsGallery = () => {
 
         <input
           type="number"
-          className="border rounded px-4 py-2"
+          className="border rounded px-4 text-black"
           value={sol}
           onChange={(e) => setSol(e.target.value)}
           placeholder="Enter Sol"
