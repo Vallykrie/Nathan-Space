@@ -14,6 +14,7 @@ function App() {
           <Route path="/epic" element={<EpicPage />} />
           <Route path="/apod" element={<ApodPage />} />
           <Route path="/marsrover" element={<MarsGallery />} />
+          <Route path="*" element></Route>
         </Routes>
       </div>
     </Router>
