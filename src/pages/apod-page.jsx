@@ -1,28 +1,23 @@
 import { useState, useEffect } from "react";
 import NavBar from "../components/navbar";
+import Calendar from "../components/calendar";
+import { fetchApod } from "../utils/api";
 
 const APOD = () => {
   const [apodData, setApodData] = useState(null);
   const [date, setDate] = useState("");
 
-  const apiKey = "dXjYZ2WhSDl2SPkXYx7BV2uridSQOpUA8XNIdXtf";
-
   useEffect(() => {
-    fetchAPOD();
+    const getApodData = async () => {
+      try {
+        const data = await fetchApod(date);
+        setApodData(data);
+      } catch (error) {
+        console.error("Error fetching APOD data:", error);
+      }
+    };
+    getApodData();
   }, [date]);
-
-  const fetchAPOD = async () => {
-    const url = date
-      ? `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${apiKey}`
-      : `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setApodData(data);
-    } catch (error) {
-      console.error("Error fetching APOD data:", error);
-    }
-  };
 
   return (
     <div className="min-h-screen px-4">
@@ -31,12 +26,7 @@ const APOD = () => {
         <h1 className="text-4xl font-bold mb-8 text-center">
           Astronomy Picture of the Day
         </h1>
-        <input
-          type="date"
-          className="mb-4 p-2 bg-gray-800 border border-gray-700 rounded"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
+        <Calendar date={date} setDate={setDate} />
         {apodData ? (
           <div className="max-w-4xl text-center">
             <h2 className="text-2xl font-semibold mb-2">{apodData.title}</h2>
@@ -54,8 +44,12 @@ const APOD = () => {
                 allowFullScreen
               ></iframe>
             )}
-            <p className="text-gray-400 text-sm mb-2">{apodData.date}</p>
-            <p className="text-lg">{apodData.explanation}</p>
+            <p className="text-gray-400 text-sm mb-2 font-lao">
+              {apodData.date}
+            </p>
+            <p className="text-lg font-lao max-md:text-sm">
+              {apodData.explanation}
+            </p>
           </div>
         ) : (
           <p>Loading...</p>

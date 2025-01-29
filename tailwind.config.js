@@ -9,7 +9,7 @@ export default {
       fontFamily: {
         jockey: ['Jockey One', 'sans-serif'],
         krona: ['Krona One', 'sans-serif'],
-        lao: ['Lao Muang Khong', 'serif'],
+        lao: ['Lao Muang Khong', 'sans-serif'],
       },
     },
   },
